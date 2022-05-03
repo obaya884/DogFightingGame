@@ -318,7 +318,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &834509896 stripped
 GameObject:
@@ -691,6 +691,7 @@ GameObject:
   - component: {fileID: 7624136480764064483}
   - component: {fileID: 7624136480764064482}
   - component: {fileID: 7624136480764064484}
+  - component: {fileID: 7624136480764064485}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -726,7 +727,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7624136480764064030}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -8.94, y: 0, z: 4.13}
+  m_LocalPosition: {x: -8.94, y: 0, z: 4.023}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -777,7 +778,7 @@ NavMeshAgent:
   m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 180
   m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -796,10 +797,23 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1
+  m_Radius: 0.8
   m_Height: 2.1
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &7624136480764064485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7624136480764064030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87892e909d6774449a9c5c7e79ce83f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 7
 --- !u!1 &7624136480831243939
 GameObject:
   m_ObjectHideFlags: 0
@@ -2168,7 +2182,7 @@ Transform:
   - {fileID: 8906902215064747490}
   - {fileID: 8906902215064747020}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &8906902215064747090
 Transform:
@@ -3032,6 +3046,7 @@ GameObject:
   - component: {fileID: 8906902215072158606}
   - component: {fileID: 8906902215072158605}
   - component: {fileID: 8906902215072158607}
+  - component: {fileID: 8906902215072158608}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3839,6 +3854,19 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.6, z: 0}
+--- !u!114 &8906902215072158608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906902215064903728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87892e909d6774449a9c5c7e79ce83f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
 --- !u!137 &8906902215076474184
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

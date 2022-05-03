@@ -43,9 +43,10 @@ public class PlayerManager : MonoBehaviour
         animator.SetFloat("MoveSpeed", rigidbody.velocity.magnitude); // アニメーション切り替え
     }
 
-
     private void OnTriggerEnter(Collider other)
     {
+        WeaponManager weaponManager = other.GetComponent<WeaponManager>();
+        if (weaponManager == null) { return; }
         Debug.Log("Player is Damaged!");
     }
 }

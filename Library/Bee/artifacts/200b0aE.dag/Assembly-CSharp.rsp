@@ -354,6 +354,7 @@
 "Assets/Scripts/Enemy/EnemyRunBehavior.cs"
 "Assets/Scripts/Player/PlayerAttackBehavior.cs"
 "Assets/Scripts/Player/PlayerManager.cs"
+"Assets/Scripts/Weapon/WeaponManager.cs"
 -langversion:9.0
 
 /deterministic

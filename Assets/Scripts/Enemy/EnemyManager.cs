@@ -27,6 +27,8 @@ public class EnemyManager : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        WeaponManager weaponManager = other.GetComponent<WeaponManager>();
+        if (weaponManager == null) { return; }
         Debug.Log("Enemy is Damaged!");
     }
 }
