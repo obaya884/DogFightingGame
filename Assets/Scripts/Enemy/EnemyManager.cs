@@ -24,4 +24,9 @@ public class EnemyManager : MonoBehaviour
         agent.destination = target.position;
         animator.SetFloat("Distance", agent.remainingDistance);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Enemy is Damaged!");
+    }
 }

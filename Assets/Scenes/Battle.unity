@@ -320,6 +320,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &834509896 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: b96201848d117da4ca7dc3ade4bd59de, type: 3}
+  m_PrefabInstance: {fileID: 5900046727250645774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &834509897
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834509896}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300002, guid: b96201848d117da4ca7dc3ade4bd59de, type: 3}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,6 +690,7 @@ GameObject:
   - component: {fileID: 7624136480764064481}
   - component: {fileID: 7624136480764064483}
   - component: {fileID: 7624136480764064482}
+  - component: {fileID: 7624136480764064484}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -766,6 +786,20 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &7624136480764064484
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7624136480764064030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 2.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1 &7624136480831243939
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +934,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7624136481218068792}
+  - component: {fileID: 7624136481218068793}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -922,6 +957,19 @@ Transform:
   m_Father: {fileID: 7624136482227088647}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7624136481218068793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7624136481218068791}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 120, z: 80}
+  m_Center: {x: 0, y: 45, z: 20}
 --- !u!1 &7624136481276417243
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,6 +3031,7 @@ GameObject:
   - component: {fileID: 8906902215072158604}
   - component: {fileID: 8906902215072158606}
   - component: {fileID: 8906902215072158605}
+  - component: {fileID: 8906902215072158607}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3776,6 +3825,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &8906902215072158607
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906902215064903728}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.5
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.6, z: 0}
 --- !u!137 &8906902215076474184
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

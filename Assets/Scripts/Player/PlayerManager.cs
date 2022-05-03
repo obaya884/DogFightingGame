@@ -42,4 +42,10 @@ public class PlayerManager : MonoBehaviour
         rigidbody.velocity = moveVector; // 速度設定
         animator.SetFloat("MoveSpeed", rigidbody.velocity.magnitude); // アニメーション切り替え
     }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Player is Damaged!");
+    }
 }
