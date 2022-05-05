@@ -60,9 +60,11 @@
     <Compile Include="Assets/Scripts/Enemy/EnemyAttackBehavior.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyIdleBehavior.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyManager.cs" />
+    <Compile Include="Assets/Scripts/Enemy/EnemyHurtBehavior.cs" />
     <Compile Include="Assets/Scripts/Enemy/EnemyRunBehavior.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerAttackBehavior.cs" />
     <Compile Include="Assets/Scripts/Player/PlayerManager.cs" />
+    <Compile Include="Assets/Scripts/Player/PlayerHurtBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -10,12 +10,14 @@ public class PlayerManager : MonoBehaviour
     float x;
     float z;
     public float moveSpeed = 3;
+    public Collider weaponCollider;
 
     // Start is called before the first frame update
     void Start()
     {
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
+        HideColliderWeapon();
     }
 
     // Update is called once per frame
@@ -43,10 +45,21 @@ public class PlayerManager : MonoBehaviour
         animator.SetFloat("MoveSpeed", rigidbody.velocity.magnitude); // アニメーション切り替え
     }
 
+    public void HideColliderWeapon()
+    {
+        weaponCollider.enabled = false;
+    }
+
+    public void ShowColliderWeapon()
+    {
+        weaponCollider.enabled = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         WeaponManager weaponManager = other.GetComponent<WeaponManager>();
         if (weaponManager == null) { return; }
         Debug.Log("Player is Damaged!");
+        animator.SetTrigger("Hurt");
     }
 }

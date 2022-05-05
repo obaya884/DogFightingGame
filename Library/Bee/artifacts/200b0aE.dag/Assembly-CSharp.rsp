@@ -349,10 +349,12 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Enemy/EnemyAttackBehavior.cs"
+"Assets/Scripts/Enemy/EnemyHurtBehavior.cs"
 "Assets/Scripts/Enemy/EnemyIdleBehavior.cs"
 "Assets/Scripts/Enemy/EnemyManager.cs"
 "Assets/Scripts/Enemy/EnemyRunBehavior.cs"
 "Assets/Scripts/Player/PlayerAttackBehavior.cs"
+"Assets/Scripts/Player/PlayerHurtBehavior.cs"
 "Assets/Scripts/Player/PlayerManager.cs"
 "Assets/Scripts/Weapon/WeaponManager.cs"
 -langversion:9.0

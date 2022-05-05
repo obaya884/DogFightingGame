@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class EnemyManager : MonoBehaviour
 {
     public Transform target;
+    public Collider weaponCollider;
+
     NavMeshAgent agent;
     Animator animator;
 
@@ -16,6 +18,7 @@ public class EnemyManager : MonoBehaviour
         animator = GetComponent<Animator>();
 
         agent.destination = target.position;
+        HideColliderWeapon();
     }
 
     // Update is called once per frame
@@ -25,10 +28,21 @@ public class EnemyManager : MonoBehaviour
         animator.SetFloat("Distance", agent.remainingDistance);
     }
 
+    public void HideColliderWeapon()
+    {
+        weaponCollider.enabled = false;
+    }
+
+    public void ShowColliderWeapon()
+    {
+        weaponCollider.enabled = true;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         WeaponManager weaponManager = other.GetComponent<WeaponManager>();
         if (weaponManager == null) { return; }
         Debug.Log("Enemy is Damaged!");
+        animator.SetTrigger("Hurt");
     }
 }

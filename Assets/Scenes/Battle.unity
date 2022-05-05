@@ -339,6 +339,19 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: b96201848d117da4ca7dc3ade4bd59de, type: 3}
+--- !u!114 &834509900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834509896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87892e909d6774449a9c5c7e79ce83f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +704,6 @@ GameObject:
   - component: {fileID: 7624136480764064483}
   - component: {fileID: 7624136480764064482}
   - component: {fileID: 7624136480764064484}
-  - component: {fileID: 7624136480764064485}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -765,6 +777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 8906902215064747088}
+  weaponCollider: {fileID: 7624136481218068793}
 --- !u!195 &7624136480764064483
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -801,19 +814,6 @@ CapsuleCollider:
   m_Height: 2.1
   m_Direction: 1
   m_Center: {x: 0, y: 0.9, z: 0}
---- !u!114 &7624136480764064485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7624136480764064030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87892e909d6774449a9c5c7e79ce83f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 7
 --- !u!1 &7624136480831243939
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7624136481218068792}
   - component: {fileID: 7624136481218068793}
+  - component: {fileID: 7624136481218068794}
   m_Layer: 0
   m_Name: Axe
   m_TagString: Untagged
@@ -984,6 +985,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5, y: 120, z: 80}
   m_Center: {x: 0, y: 45, z: 20}
+--- !u!114 &7624136481218068794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7624136481218068791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87892e909d6774449a9c5c7e79ce83f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
 --- !u!1 &7624136481276417243
 GameObject:
   m_ObjectHideFlags: 0
@@ -3046,7 +3060,6 @@ GameObject:
   - component: {fileID: 8906902215072158606}
   - component: {fileID: 8906902215072158605}
   - component: {fileID: 8906902215072158607}
-  - component: {fileID: 8906902215072158608}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3824,6 +3837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  weaponCollider: {fileID: 834509897}
 --- !u!54 &8906902215072158606
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3854,19 +3868,6 @@ CapsuleCollider:
   m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: 0.6, z: 0}
---- !u!114 &8906902215072158608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8906902215064903728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87892e909d6774449a9c5c7e79ce83f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 10
 --- !u!137 &8906902215076474184
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
