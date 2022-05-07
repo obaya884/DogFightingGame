@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public float moveSpeed = 3;
+    public Collider weaponCollider;
+
     Rigidbody rigidbody;
     Animator animator;
 
     float x;
     float z;
-    public float moveSpeed = 3;
-    public Collider weaponCollider;
+    int maxHp = 100;
+    int hp = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,7 @@ public class PlayerManager : MonoBehaviour
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         HideColliderWeapon();
+        hp = maxHp;
     }
 
     // Update is called once per frame
@@ -59,7 +63,18 @@ public class PlayerManager : MonoBehaviour
     {
         WeaponManager weaponManager = other.GetComponent<WeaponManager>();
         if (weaponManager == null) { return; }
+        takeDamage(weaponManager.damage);
         Debug.Log("Player is Damaged!");
         animator.SetTrigger("Hurt");
+    }
+
+    void takeDamage(int damage)
+    {
+        hp -= damage;
+        if (hp <= 0)
+        {
+            hp = 0;
+        }
+        Debug.Log("Playerの残りHP：" + hp);
     }
 }
