@@ -356,6 +356,7 @@
 "Assets/Scripts/Player/PlayerAttackBehavior.cs"
 "Assets/Scripts/Player/PlayerHurtBehavior.cs"
 "Assets/Scripts/Player/PlayerManager.cs"
+"Assets/Scripts/Player/PlayerUIManager.cs"
 "Assets/Scripts/Weapon/WeaponManager.cs"
 -langversion:9.0
 
